@@ -23,7 +23,7 @@ A review of [rivertherapyfishing.com](https://rivertherapyfishing.com/), checked
 
 1. **Broken cabin page.** The "View Our Retreat" button leads to a 404 error, and no other page has cabin details.
 2. **Wrong phone links.** The "Call" buttons on the Trips & Rates and Contact pages dial incorrect numbers.
-3. **Gift cards can't be bought.** The gift card page says "out of stock" but gift cards are still advertised on other pages.
+3. **Gift card buttons lead to an "out of stock" page.** The "Purchase a Gift Card" button (Trips & Rates) and the FAQ's "Gift Card" link (What to Expect) both land on a page marked out of stock. Fix: link them straight to the gift card option in Peek.
 4. **No Terms & Conditions or Privacy Policy.** The footer links go nowhere, and no cancellation or catch-guarantee terms are stated.
 
 ## Strengths to keep
