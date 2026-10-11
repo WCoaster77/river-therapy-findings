@@ -1,0 +1,184 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>River Therapy Website Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;700&family=Public+Sans:wght@400;600;700&display=swap">
+<style>
+/* Layout: single reading column, report masthead, findings grouped by urgency with severity stripes */
+:root{
+  --bg:#f3f5f4;
+  --surface:#ffffff;
+  --fg:#17242b;
+  --muted:#55656c;
+  --line:#d6dedd;
+  --accent:#1f4488;
+  --accent-soft:#e3eaf5;
+  --crit:#b2392b; --crit-soft:#f8e4e1;
+  --warn:#9a6a0b; --warn-soft:#f6edd8;
+  --minor:#4c6d73; --minor-soft:#e2ecec;
+  --good:#2f6e4a; --good-soft:#e1efe6;
+  --display:"Zilla Slab", Rockwell, "Roboto Slab", Georgia, serif;
+  --body:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#10181c; --surface:#172228; --fg:#e4ebec; --muted:#9aaaae; --line:#2a3a41;
+    --accent:#86a9e6; --accent-soft:#1c2c45;
+    --crit:#ee8a7c; --crit-soft:#3a1f1c;
+    --warn:#e2b45a; --warn-soft:#352a14;
+    --minor:#9cc0c4; --minor-soft:#1e2e31;
+    --good:#86c9a0; --good-soft:#1a3024;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10181c; --surface:#172228; --fg:#e4ebec; --muted:#9aaaae; --line:#2a3a41;
+  --accent:#86a9e6; --accent-soft:#1c2c45;
+  --crit:#ee8a7c; --crit-soft:#3a1f1c;
+  --warn:#e2b45a; --warn-soft:#352a14;
+  --minor:#9cc0c4; --minor-soft:#1e2e31;
+  --good:#86c9a0; --good-soft:#1a3024;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:760px;margin:0 auto}
+header.mast{padding-block:48px 28px;border-bottom:2px solid var(--fg);margin-bottom:36px}
+.eyebrow{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 10px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(2rem,6vw,3rem);line-height:1.08;margin:0 0 18px;text-wrap:balance}
+h2{font-family:var(--display);font-weight:700;font-size:1.6rem;line-height:1.2;margin:0 0 6px;text-wrap:balance}
+h3{font-size:1.05rem;margin:0 0 4px;text-wrap:balance}
+p{margin:0}
+.meta{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:.92rem;margin:0}
+.meta dt{color:var(--muted);font-weight:600}
+.meta dd{margin:0;min-width:0}
+.tally{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.chip.crit{background:var(--crit-soft);color:var(--crit)}
+.chip.warn{background:var(--warn-soft);color:var(--warn)}
+.chip.minor{background:var(--minor-soft);color:var(--minor)}
+.chip.good{background:var(--good-soft);color:var(--good)}
+section{margin-bottom:48px}
+.lede{color:var(--muted);margin-bottom:20px}
+.good-list{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.good-list li{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start}
+.tick{width:22px;height:22px;border-radius:50%;background:var(--good-soft);color:var(--good);display:grid;place-items:center;font-size:.8rem;font-weight:700;margin-top:2px}
+.issues{display:grid;gap:14px}
+.issue{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--crit);border-radius:6px;padding:18px 20px;display:grid;gap:8px}
+.issue .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:baseline}
+.issue ul{margin:4px 0 0;padding-left:20px}
+.issue li+li{margin-top:4px}
+.mismatch{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.mismatch li{padding:14px 0 14px 16px;border-bottom:1px solid var(--line);border-left:3px solid var(--warn);margin-top:-1px}
+.mismatch strong{display:block;margin-bottom:2px}
+.minor-list{margin:0;padding-left:20px;display:grid;gap:8px}
+.minor-list li::marker{color:var(--minor)}
+.qs{counter-reset:q;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.qs li{counter-increment:q;display:grid;grid-template-columns:34px 1fr;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px}
+.qs li::before{content:counter(q);font-family:var(--display);font-weight:700;font-size:1.3rem;color:var(--accent);line-height:1.2}
+.contact{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:.88rem;color:var(--muted)}
+code{font-size:.88em;background:var(--accent-soft);color:var(--accent);padding:1px 5px;border-radius:4px;word-break:break-all}
+</style>
+
+<div class="wrap">
+  <header class="mast">
+    <p class="eyebrow">Website review</p>
+    <h1>River Therapy Fishing</h1>
+    <dl class="meta">
+      <dt>Site</dt><dd>rivertherapyfishing.com</dd>
+      <dt>Reviewed</dt><dd>October 11, 2026</dd>
+      <dt>Pages checked</dt><dd>Home, Trips &amp; Rates, What to Expect, Contact, Gift Card</dd>
+      <dt>Not checked</dt><dd>The brochure PDF, the Peek booking pages, outside links</dd>
+    </dl>
+    <div class="tally" aria-label="Summary of findings">
+      <span class="chip good">5 strengths</span>
+      <span class="chip crit">4 urgent problems</span>
+      <span class="chip warn">7 unclear or mismatched details</span>
+      <span class="chip minor">6 smaller fixes</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>What's working well</h2>
+    <p class="lede">These are worth keeping in any redesign.</p>
+    <ul class="good-list">
+      <li><span class="tick" aria-hidden="true">✓</span><div><strong>Clear pricing.</strong> Each trip shows prices for 1 to 5 people, with what's included and what isn't. Many charter sites don't do this.</div></li>
+      <li><span class="tick" aria-hidden="true">✓</span><div><strong>A strong offer.</strong> The 100% catch guarantee and the "you don't pay" promise are compelling and appear prominently.</div></li>
+      <li><span class="tick" aria-hidden="true">✓</span><div><strong>Useful planning content.</strong> The What to Expect page has seasonal packing lists, a fish calendar, launch maps and an FAQ. This answers most customer questions before they call.</div></li>
+      <li><span class="tick" aria-hidden="true">✓</span><div><strong>People-focused.</strong> Guide bios, real testimonials and the "fishing as therapy" message give the business a personal, trustworthy feel.</div></li>
+      <li><span class="tick" aria-hidden="true">✓</span><div><strong>Online booking</strong> through Peek works from every page.</div></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Problems that may be costing you bookings</h2>
+    <p class="lede">Listed most urgent first.</p>
+    <div class="issues">
+      <article class="issue">
+        <div class="row"><h3>Your cabin page is broken</h3><span class="chip crit">Urgent</span></div>
+        <p>The homepage "View Our Retreat" button leads to an error page (404). No other page on the site has cabin details, photos, rates or booking. Anyone interested in the cabin hits a dead end.</p>
+      </article>
+      <article class="issue">
+        <div class="row"><h3>Two "Call" buttons dial the wrong number</h3><span class="chip crit">Urgent</span></div>
+        <ul>
+          <li>On the <strong>Trips &amp; Rates</strong> page, the "Call 604-354-1967" button dials a number that is missing a digit.</li>
+          <li>On the <strong>Contact</strong> page, the phone link is also typed incorrectly.</li>
+        </ul>
+        <p>The number in the footer works. Customers tapping the other buttons on their phones will not reach you.</p>
+      </article>
+      <article class="issue">
+        <div class="row"><h3>Gift cards can't be bought on the site</h3><span class="chip crit">Urgent</span></div>
+        <p>The gift card page says "out of stock and unavailable." Your Trips page and FAQ still advertise gift cards. This is a missed sale, especially before Christmas.</p>
+      </article>
+      <article class="issue">
+        <div class="row"><h3>No Terms &amp; Conditions or Privacy Policy</h3><span class="chip crit">Urgent</span></div>
+        <p>The footer links for both go nowhere. You take bookings and collect personal information through the contact form, so these pages should exist. Your cancellation and refund policy, and the exact terms of the catch guarantee, aren't stated anywhere I could find.</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Information that is unclear or doesn't match</h2>
+    <p class="lede">Customers may notice these and get confused or call to ask.</p>
+    <ul class="mismatch">
+      <li><strong>Trip lengths don't match between pages.</strong>The homepage lists 4hr, 8hr and Canyon trips. The Trips page lists 4hr, 6hr, 8hr, 10hr, Canyon and Wilderness.</li>
+      <li><strong>Canyon trip.</strong>No trip length is shown, and the page doesn't say whether the catch guarantee applies.</li>
+      <li><strong>Wilderness trip.</strong>The title says "Steelhead," but the description says fly fishing for bull trout. It's also unclear whether $1595 is per boat or per person, and how many people can go.</li>
+      <li><strong>10hr trip.</strong>The title says "Chilliwack or Agassiz," but the description says "Chilliwack, Mission or Agassiz." Agassiz isn't in your list of launch locations on the What to Expect page.</li>
+      <li><strong>Booking buttons.</strong>The Full Day and 10hr trips use the same booking link. Please check that each one opens the correct trip in Peek.</li>
+      <li><strong>"Book Your Trip" button.</strong>On the What to Expect page it goes to the Contact page, while every other page goes to online booking.</li>
+      <li><strong>Taxes.</strong>The site doesn't say whether prices include tax.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Smaller fixes</h2>
+    <ul class="minor-list">
+      <li>The footer still says "Copyright © 2022."</li>
+      <li>Keenan's photo is labelled "Ken Chambers" behind the scenes. Search engines and screen readers see this label.</li>
+      <li>Typos: "life coats" should be "life jackets." "Lilooet" is spelled two ways; the correct spelling is "Lillooet."</li>
+      <li>Some address links on the What to Expect launch maps are broken.</li>
+      <li>The What to Expect page isn't in the top menu, so it's only reachable through buttons on other pages.</li>
+      <li>The fish calendar appears on two pages, so every update has to be made twice.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Questions for you</h2>
+    <p class="lede">Your answers will help with planning a new site.</p>
+    <ol class="qs">
+      <li><div>Is the cabin still available to rent? If so, where do guests book it, and what are the rates and details?</div></li>
+      <li><div>How long is the Canyon trip, and is it covered by the catch guarantee?</div></li>
+      <li><div>Is the Wilderness trip for steelhead, bull trout, or both? Is $1595 per boat or per person?</div></li>
+      <li><div>Do prices include GST/PST?</div></li>
+      <li><div>What is your cancellation, refund and weather policy?</div></li>
+      <li><div>Do you want to keep using Peek for bookings and gift cards?</div></li>
+      <li><div>Are the guides and testimonials on the site still current?</div></li>
+      <li><div>Do you have more recent photos, videos or reviews you'd like featured?</div></li>
+    </ol>
+  </section>
+
+  <p class="contact">Review based on the live site as of October 11, 2026. Business contact on file: rivertherapyfishing@gmail.com · 604-354-1967.</p>
+</div>
+
+</body></html>
